@@ -1,0 +1,80 @@
+BLOG ON DIFFERENCE BETWEEN DOCUMENT AND WINDOW OBJECT
+
+In web development, both ‘document’ and ‘window’ objects are fundamental parts of the browser's Document Object Model (DOM) and JavaScript environment. Here are the key differences between the two:
+
+Window Object
+	The window object is the topmost object of the DOM hierarchy. It represents a browser window or frame that displays the contents of the webpage. Whenever a window appears on the screen to display the contents of the document, the window object is created. 
+
+1. Global Scope: The ‘window’ object represents the browser's window or frame containing a DOM document. It is the global object in a web page, meaning all global JavaScript objects, functions, and variables are members of the ‘window’ object.
+
+2. Browser API Access: It provides access to the browser's features, such as:
+   - ‘window.alert()’: Display alert dialog boxes.
+   - ‘window.location’: Access or manipulate the current URL.
+   - ‘window.setTimeout()’, ‘window.setInterval()’: Manage timing events.
+   - ‘window.open()’: Open new browser windows or tabs.
+
+3. Event Handling: It handles events at the window level, like resize and scroll events.
+
+Methods of Window:
+•	alert(): It is used to display an alert box. It displays a specified message along with an OK button and is generally used to make sure that the information comes through the user.
+•	blur(): It is used to remove focus from the current window.
+•	btoa(): It is used for encoding a string in base-64 format.
+•	clearInterval(): It clears the interval which has been set by the setInterval() function before that.
+•	clearTimeout(): It clears the timeout which has been set by the setTimeout()function before that.
+•	close(): It is used for closing a certain window or tab of the browser which was previously opened.
+•	confirm(): It is used to display a modal dialog with an optional message and two buttons i.e. OK and Cancel. It returns true if the user clicks “OK”, and false otherwise.
+•	getSelection(): It returns a Selection object representing the range of text selected by the user
+
+Document Object
+	The document object represents a web page that is loaded in the browser. By accessing the document object, we can access the element in the HTML page. With the help of document objects, we can add dynamic content to our web page. The document object can be accessed with a window.document or just document.
+
+1. DOM Representation: The ‘document’ object represents the HTML document loaded in that window. It serves as the entry point to the web page's content.
+
+2. Content Manipulation: It provides methods and properties for manipulating the DOM, such as:
+   - ‘document.getElementById()’, ‘document.querySelector()’: Select HTML elements.
+   - ‘document.createElement()’: Create new HTML elements.
+   - ‘document.body’, ‘document.head’: Access the body and head sections of the HTML document.
+
+3. Event Handling: It handles events specific to the document, such as click and keypress events on elements.
+
+•	addEventListener(): It is used to attach an event handler to the specified element.
+•	adoptNode(): It is used to adopt a node from another document and it returns a node object, representing the adopted node.
+•	createElement(): It is used to create HTML element .
+•	createEvent(): It is used to create a new events object.
+•	createTextNode(): It is used to create a textnode.
+•	execCommand(): It is used to execute a command specified by the user on the editable selected section. It returns a Boolean value.
+•	getElementById(): It returns the object of the given ID. If no object with that id exists then it returns null.
+•	getElementsByClassName(): It returns an object containing all the elements with the specified class names in the document as objects.
+•	getElementsByName(): It returns an object containing all the elements with the specified name in the document as objects.
+•	getElementsByTagName(): It returns an object containing all the elements with the specified tag names in the document as objects.
+•	renameNode(): It is used to rename the node.
+•	write(): It is used to write some content or javascript code in the document.
+•	writeln(): It is used to write a document with a newline character after each statement.
+
+
+Key Differences between Window and Document Object:
+
+ Scope and Purpose:
+	Window is the global object encompassing the entire browser window.
+	Document is the object representing the content of the loaded HTML document.
+
+ APIs and Methods:
+	Window provides methods and properties related to the browser window and global environment.
+	Document provides methods and properties to manipulate and interact with the HTML content.
+
+ Events:
+	Window manages events related to the window itself (e.g., load, resize).
+	Document manages events related to the document's content (e.g., DOMContentLoaded, click).
+
+Example
+
+In javascript
+// Using the window object
+window.alert("Hello, world!");
+
+// Using the document object
+document.getElementById("myElement").textContent = "Hello, world!";
+‘‘‘
+
+In this example, “window.alert” is a method that displays an alert box, while “document.getElementById” is a method to select an HTML element and change its text content. These distinctions illustrate how “window” and “document” serve different roles in web development.
+
